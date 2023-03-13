@@ -18,7 +18,7 @@
 
 <script>
     let postDiv = document.getElementById('postDiv');
-// 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
+    // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
     const thisPostUrl = new URL (location.href);
     const postId = thisPostUrl.searchParams.get('id');
     const postUserId = thisPostUrl.searchParams.get('userId');
@@ -52,12 +52,12 @@
                 }
             }
             postObject(value);
-    });
+        });
 
 
 
 
-// 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
+    // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
     //
     //
     let postDetails = new URL (`https://jsonplaceholder.typicode.com/posts/${postUserId}/comments`);
@@ -70,7 +70,7 @@
             let getterDetails = function (getter) {
                 const detailsKeys = Object.keys(getter);
                 let detailsDiv = document.createElement('div');
-                    detailsDiv.className = 'detailsDiv';
+                detailsDiv.className = 'detailsDiv';
                 for (let i = 0; i < detailsKeys.length; ++i)
                 {
                     if (typeof getter[detailsKeys[i]] !== 'object') {
@@ -80,16 +80,16 @@
                         console.log(postDetailsH4);
                         detailsDiv.appendChild(postDetailsH4);
                     } else {
-                            getterDetails(getter[detailsKeys[i]]);
-                      }
+                        getterDetails(getter[detailsKeys[i]]);
+                    }
                 }
                 //
                 postDetailsDiv.appendChild(detailsDiv);
             }
             getterDetails(value);
         });
-//
-//
+    //
+    //
 </script>
 
 
