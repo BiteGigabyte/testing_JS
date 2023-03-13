@@ -1,0 +1,208 @@
+
+/*Стилизація проєкта -*/
+/*index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+/*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
+/*блоки з короткою іфною про post - в ряд по 5 .*/
+/*post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/*Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд)*/
+
+
+body {
+    background-image: url(fone1.jpg);
+    background-size: cover;
+}
+
+
+
+/*Стилізація index.html сторінки*/
+#mainDiv_index {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+}
+
+.headDiv-index {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid cornflowerblue;
+    border-bottom: 2px solid cornflowerblue;
+    background: #30A100;
+}
+
+.headH2-index {
+    width: 50%;
+    text-align: center;
+    min-width: 114px;
+}
+
+.twiceDiv-index {
+    width: 50%;
+    border: 1px solid cornflowerblue;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+}
+
+.index-h3 {
+    text-align: center;
+    font-size: 130%;
+    overflow: auto;
+    hyphens: auto;
+    color: white;
+/*    */
+}
+
+.index-input {
+    justify-content: center;
+    padding: 4px;
+    border-radius: 8px;
+    width: 90%;
+    height: 37px;
+    background: aliceblue;
+    font-size: 108%;
+}
+
+.index-a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
+
+
+/*Стилізація user-details.html*/
+#detailsMain_div {
+    border: 2px solid cornflowerblue;
+    padding: 5px 0 5px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.h2Main {
+    width: 100%;
+    margin: 0 3px 0 3px;
+    overflow: auto;
+    color: white;
+}
+
+#postsInput {
+    width: 90%;
+    margin: 15px 5% 15px 5%;
+    padding: 10px;
+    font-size: 300%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    border-radius: 5px;
+}
+
+#titleDiv {
+    border: 2px solid cornflowerblue;
+    border-top: 0;
+    padding: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.2%;
+    column-gap: 0.2%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.titleA {
+    text-decoration: none;
+    width: 19.5%;
+    border: 2px solid lightgreen;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.titleA:hover {
+    text-decoration: underline;
+}
+
+.titleH3 {
+    margin: 0 3px 0 3px;
+    font-size: 150%;
+    padding: 3px;
+    color: white;
+}
+
+.userDiv {
+    padding-left: 20px;
+    border-left: 2px solid cornflowerblue;
+}
+
+
+
+/*Стилізація post-details.html сторінки*/
+#postDiv {
+    border: 2px solid limegreen;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    background: darkorange;
+    font-size: 130%;
+    overflow: auto;
+    border-radius: 5px;
+}
+
+#postDetailsDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detailsDiv {
+    width: 100%;
+    border: 2px solid darkorange;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1%;
+    padding-left: 3%;
+    background: lightgreen;
+    border-radius: 5px;
+
+}
+
+.postDetailsH4 {
+    width: 50%;
+    font-size: 120%;
+    overflow: auto;
+}
+
+.red-text {
+    color: #A03447;
+}
+
+.blue-text {
+    color: #AB529C;
+}
+
+
+/**/
+/**/
+/**/
+@media screen and (max-width: 450px) {
+    .twiceDiv-index {
+        width: 100%;
+    }
+
+    .postDetailsH4 {
+        width: 100%;
+    }
+
+    .userDiv {
+        padding-left: 3px;
+    }
+
+    #detailsMain_div {
+        padding-left: 3px;
+    }
+
+    .titleA {
+        width: 100%;
+    }
+}
+
+
